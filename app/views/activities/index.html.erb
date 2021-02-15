@@ -1,0 +1,12 @@
+<h1>wingardum leviosa sa sa sallllsaaaa </h1>
+
+ <ul>
+  <% @activities.each do |restaurant| %>
+  <li>
+  <%= link_to activity.name, activity_path(activity) %>
+</li>
+  <% end  %>
+</ul>
+
+<%= link_to 'Add a witchery activity', new_activity_path %>
+
