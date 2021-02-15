@@ -1,1 +1,25 @@
+.navbar-wizzie {
+  height: 80px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  background: #350b40;
+  color: white;
+}
 
+.sticky-top {
+  position: sticky;
+}
+
+.avatar {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navbar-wizzie .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-wizzie .navbar-brand img {
+  width: 40px;
+  border-radius: 50%;
+}
