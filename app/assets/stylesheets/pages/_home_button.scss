@@ -1,0 +1,67 @@
+.trace-motion {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  opacity: .8;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+main {
+  margin: 4em auto 8em;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+}
+
+.spell-card {
+  flex: 0 0 110px;
+  border: 1px;
+  border-radius: 50%;
+  margin: 10px;
+  background: #333;
+
+  &__inner {
+    border-radius: 17px;
+    overflow: hidden;
+    background: #333;
+  }
+  h5 {
+    font-family: -webkit-pictograph;
+    font-size: 17px;
+    color: grey;
+    word-spacing: -19px;
+  }
+  &__shape {
+    background: #333;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    svg {
+      width: 90%;
+      max-width: 50px;
+      filter: drop-shadow(0 0 12px #0ff) drop-shadow(-2px -2px 12px #00bcd4);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .trace-motion {
+      animation: draw .7s linear forwards;
+    }
+  }
+}
