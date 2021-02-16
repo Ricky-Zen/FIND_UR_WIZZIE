@@ -4,7 +4,6 @@
     <title>FINDUrWizzie</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= render 'shared/navbar' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,12 +12,8 @@
   </head>
 
   <body>
-<!--     <body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
- -->
-  <%= render 'shared/navbar-ok' %>
-  </body>
-    </div>
 
+  <%= render 'shared/navbar' %>
     <%= yield %>
 
   </body>
