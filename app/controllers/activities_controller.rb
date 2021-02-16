@@ -30,6 +30,12 @@ class ActivitiesController < ApplicationController
     @activity.destroy
   end
 
+  def destroy
+    @activity = Activity.find(params[:id])
+    authorize(@activity)
+    @activity.destroy
+  end
+
   private
 
   def activity_params
