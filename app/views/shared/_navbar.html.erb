@@ -7,20 +7,19 @@
     </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <% if current_user %>
+      <% if current_user %>
+        <li class="nav-item active">
           <%= link_to "Dashboard", profile_path, class: "nav-link text-white"  %>
-          </li>
-          <li class="nav-item dropdown">
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://pbs.twimg.com/profile_images/378800000408529086/5108c0356be611a5509f3d869c2dbd3d_400x400.jpeg" />
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         </li>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link text-white"  %>
-      </div>
-        <% else %>
-          <%= link_to "Log in", new_user_session_path, class: "nav-link text-white" %>
-        <% end %>
-      </li>
+        <li class="nav-item dropdown">
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://pbs.twimg.com/profile_images/378800000408529086/5108c0356be611a5509f3d869c2dbd3d_400x400.jpeg" />
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link"  %>
+          </div>
+        </li>
+      <% else %>
+        <%= link_to "Log in", new_user_session_path, class: "nav-link text-white" %>
+      <% end %>
     </ul>
   </div>
 </nav>
