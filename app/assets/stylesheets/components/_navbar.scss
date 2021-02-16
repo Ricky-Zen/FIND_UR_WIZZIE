@@ -1,9 +1,14 @@
+.home-navbar {
+  position: absolute;
+  background: transparent !important;
+}
+
 .navbar-wizzie {
-  height: 79px;
-  margin-bottom: 30px;
-  justify-content: space-between;
-  background: #350b40;
-  color: white;
+    height: 80px;
+    justify-content: space-between;
+    color: white;
+    width: 100vw;
+    background-color: purple;
 }
 
 .sticky-top {
@@ -23,3 +28,4 @@
   width: 40px;
   border-radius: 50%;
 }
+
