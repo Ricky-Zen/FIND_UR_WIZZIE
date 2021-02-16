@@ -13,6 +13,7 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = Activity.new(activity_params)
+    @activity.user = current_user
     if @activity.save
       redirect_to activity_path(@activity), notice: 'Magic is in the air !'
     else
@@ -23,6 +24,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:name, :city, :description, :price)
+    params.require(:activity).permit(:name, :city, :description, :price, :category, :theme_id)
   end
 end

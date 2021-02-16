@@ -1,10 +1,14 @@
-<%= simple_form_for @activity do |f| %>
+<%= simple_form_for [@activity] do |f| %>
+<%= f.association :theme %>
 <%= f.input :name %>
 <%= f.input :description %>
 <%= f.input :city %>
 <%= f.input :price %>
 
+
 <%= f.submit %>
 <% end %>
 
-<%= link_to "Back to witch bizbiz", activity_path(@activity) %>
+
+
+<%= link_to "Back to list", activities_path %>
