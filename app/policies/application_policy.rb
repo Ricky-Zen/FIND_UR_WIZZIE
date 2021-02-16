@@ -11,27 +11,27 @@ class ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def create?
-    false
+    true
   end
 
   def new?
-    create?
+    true
   end
 
   def update?
-    false
+    record.user == user
   end
 
   def edit?
-    update?
+    record.user == user
   end
 
   def destroy?
-    false
+    record.user == user
   end
 
   class Scope
