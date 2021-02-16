@@ -9,6 +9,7 @@
 Activity.destroy_all
 Theme.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 user = User.create(first_name: 'lol', last_name: 'lol', password: 'lollol', email: "a@at.at")
 sports = Theme.create(name: 'sports')
@@ -18,3 +19,5 @@ Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', t
 Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
 Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
 Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
+
+

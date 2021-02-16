@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # post 'create', to: 'activities#create'
   # get 'new', to: 'activities#new'
 
-  resources :activities, only: [:index, :show, :create, :new] do
+  resources :activities, only: [:index, :show, :create, :new, :destroy] do
     resources :bookings, only: [:create, :new]
   end
 
