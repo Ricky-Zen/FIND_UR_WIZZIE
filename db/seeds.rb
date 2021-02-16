@@ -7,21 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Activity.destroy_all
- # create_table "activities", force: :cascade do |t|
- #    t.string "name"
- #    t.string "city"
- #    t.text "description"
- #    t.bigint "theme_id", null: false
- #    t.bigint "user_id", null: false
- #    t.integer "price"
- #    t.datetime "created_at", precision: 6, null: false
- #    t.datetime "updated_at", precision: 6, null: false
- #    t.index ["theme_id"], name: "index_activities_on_theme_id"
- #    t.index ["user_id"], name: "index_activities_on_user_id"
+Theme.destroy_all
+User.destroy_all
 
+user = User.create(first_name: 'lol', last_name: 'lol', password: 'lollol', email: "a@at.at")
 sports = Theme.create(name: 'sports')
-Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: sports.id)
-Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: sports.id)
-Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: sports.id)
-Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: sports.id)
-Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: sports.id)
+Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
+Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
+Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
+Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
+Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
+Activity.create(name: 'quidditch', city: 'london', description: 'jouer balle', theme_id: Theme.first.id, user_id: User.first.id)
