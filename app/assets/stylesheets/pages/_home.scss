@@ -1,12 +1,9 @@
-body {
-  font-family: -webkit-pictograph;
-  color: white;
-}
-
 .banner {
   background-size: cover;
   background-position: center;
   padding: 230px 0;
+  font-family: -webkit-pictograph;
+  color: white;
 }
 
 .banner h1 {
@@ -27,6 +24,7 @@ body {
 .form {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -51,68 +49,6 @@ body {
   background: #333;
   padding: 15px;
   height: 65px
-}
-
-// <-- BUTTON -->
-
-.trace-motion {
-  stroke-dasharray: 650;
-  stroke-dashoffset: 650;
-  opacity: .8;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-main {
-  margin: 4em auto 8em;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.spell-card {
-  flex: 0 0 160px;
-  border: 1px;
-  border-radius: 30px;
-  margin: 10px;
-  background: #333;
-
-  &__inner {
-    border-radius: 17px;
-    overflow: hidden;
-    background: #333;
-  }
-  h5 {
-    font-family: -webkit-pictograph;
-    font-size: 17px;
-    margin-bottom: 9px;
-    color: grey;
-  }
-  &__shape {
-    width: 100%;
-    height: 40px;
-    background: #333;
-    display: grid;
-    place-items: center;
-    position: relative;
-    svg {
-      width: 70%;
-      max-width: 50px;
-      filter: drop-shadow(0 0 12px #0ff) drop-shadow(-2px -2px 12px #00bcd4);
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-    .trace-motion {
-      animation: draw .7s linear forwards;
-    }
-  }
 }
 
 // <--- CARD --->
