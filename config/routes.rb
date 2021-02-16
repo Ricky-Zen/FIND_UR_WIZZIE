@@ -6,14 +6,17 @@ Rails.application.routes.draw do
   # get 'show', to: 'activities#show'
   # post 'create', to: 'activities#create'
   # get 'new', to: 'activities#new'
+
   resources :activities, only: [:index, :show, :create, :new] do
     resources :bookings, only: [:create, :new]
-    resources :bookings do
-      member do
-        patch :accept, :decline, :cancel
-      end
-    end
   end
+
+  resources :bookings do
+    member { patch :accept }
+    member { patch :decline }
+    member { patch :cancel }
+  end
+
+  resource :profile, only: [:show]
 end
 
-resource :
