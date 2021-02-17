@@ -1,15 +1,21 @@
-<h1>wingardum leviosa sa sa sallllsaaaa </h1>
+<div class="container-activities">
+<h1> All activities </h1>
 <p>
- <ul>
-  <% @activities.each do |activity| %>
-  <li>
-  <%= link_to activity.name, activity_path(activity) %>
-  <%= link_to 'Delete', activity_path(activity), method: :delete %>
-</li>
-  <% end  %>
-</ul>
+  <div class="activities">
+    <% @activities.each do |activity| %>
+      <div class="activity">
+        <%= link_to activity.name, activity_path(activity) %>
+        <%= link_to 'Delete', activity_path(activity), class: "trash",  method: :delete %>
+      </div>
+    <% end  %>
+
+  </div>
+
 </p>
-<%= link_to 'Add a witchery activity', new_activity_path %>
 
 
 
+
+<%= link_to 'Add a witchery activity', new_activity_path, class:"btn btn-primary" %>
+
+</div>
