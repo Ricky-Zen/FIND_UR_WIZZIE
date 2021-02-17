@@ -13,7 +13,7 @@ User.destroy_all
 Theme.destroy_all
 
  p 'creating user and theme'
-user = User.create!(first_name: 'lol', last_name: 'lol', password: 'lollol', email: "a@at.at")
+user = User.create!(first_name: 'Severus', last_name: 'Rogue', password: 'lollol', email: "a@at.at")
 sports = Theme.create!(name: 'Sports')
 p 'creating activities'
 a1 = Activity.create!(name: 'Match de quidditch', city: 'Rambouillet', description: 'gros match avec coups de tête autorisés', theme: sports, user: user)
