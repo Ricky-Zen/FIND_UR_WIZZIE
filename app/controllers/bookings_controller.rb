@@ -1,14 +1,15 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: [ :accept, :decline, :cancel ]
+  before_action :find_booking, only: [:accept, :decline, :cancel]
 
   def new
     @user = current_user
-    @activity = Activity.find(params[:activity_id])
     @booking = Booking.new
+    authorize(@booking)
   end
 
   def create
     @booking = Booking.new(booking_params)
+    authorize(@booking)
   end
 
   def accept
