@@ -27,13 +27,9 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     authorize(@activity)
-    @activity.destroy
-  end
-
-  def destroy
-    @activity = Activity.find(params[:id])
-    authorize(@activity)
-    @activity.destroy
+    if @activity.destroy
+      redirect_to activities_path
+    end
   end
 
   private
