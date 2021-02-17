@@ -7,6 +7,11 @@
   font-style: bold;
 }
 
+img.image-test {
+    width: 100vw;
+    object-fit: cover;
+}
+
 // .container {
 //   background-image: url(http://idata.over-blog.com/3/11/71/06/terrain0zv.jpg);
 //   background-size: cover;
@@ -15,7 +20,3 @@
 //   padding: 50px;
 // }
 
-img.image-test {
-    width: 100vw;
-    object-fit: cover;
-}
