@@ -8,6 +8,12 @@
   <h3><%= @activity.price %></h3>
   <p><%= @activity.description %></p>
 
+
+<%= simple_form_for [@activity, @booking] do |f| %>
+<%= f.input :date, as: :date %>
+<%= f.submit %>
+<% end %>
+
   <%= link_to 'Back to list', activities_path, class:"btn btn-info mb-4"%>
 </div>
   <%= link_to 'Book this activity',  new_booking_path %>

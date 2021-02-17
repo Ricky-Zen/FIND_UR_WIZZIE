@@ -2,10 +2,10 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.yesiwantit.com/blog/wp-content/uploads/2019/09/harry-potter-and-friends-in-one-of-the-earlier-movies-1250x600.jpeg);">
 
     <div class="container">
-      <h1>Found your wizzie</h1>
+      <h1>Find your wizzie</h1>
       <div class="input">
         <%= form_for :activities, url: activities_path, method: :get, html: { class: "form"} do |f| %>
-          <%= f.text_field :theme, placeholder: "Themes", label: "Theme" %>
+          <%= f.select :theme, options_for_select(@themes), include_blank: "Theme"%>
           <%= f.text_field :name, placeholder: "Activity"%>
           <%= f.text_field :city, placeholder: "City"%>
           <button type="submit" class="spell-card">
@@ -20,7 +20,6 @@
                 </svg>
               </div>
               <div class="spell-card__name">
-<!--                 <h5>Acio Wizzie</h5> -->
                 <%= image_tag image_url("magic_wand.png"), alt: "magic-wand-button", class: "magic-wand" %>
               </div>
             </button>
