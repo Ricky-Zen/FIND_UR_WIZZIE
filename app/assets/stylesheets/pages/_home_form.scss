@@ -12,6 +12,7 @@ input {
   margin: 10px;
   text-align: center;
   border-right: 1px solid black;
+  background: #333;
 }
 
 .input {
@@ -20,4 +21,6 @@ input {
   border-radius: 30px;
   margin-top: 10px;
   display: flex;
+  background: #333;
+  border: none;
 }
