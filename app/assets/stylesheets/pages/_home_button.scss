@@ -25,34 +25,29 @@ button {
 }
 
 .spell-card {
-  flex: 0 0 110px;
   border: 1px;
-  border-radius: 50%;
   margin: 10px;
   background: #333;
+  height: 40px;
+  width: 150px;
 
-  &__inner {
-    border-radius: 17px;
-    overflow: hidden;
-    background: #333;
-  }
   h5 {
     font-family: "Work Sans", "Helvetica", "sans-serif";
     font-size: 17px;
     color: grey;
+    width: 100px;
   }
   &__shape {
     background: #333;
-    display: grid;
+    display: none;
     place-items: center;
     position: relative;
     padding: 20px;
-    display: flex;
     align-items: center;
     flex-direction: column;
     svg {
       width: 90%;
-      max-width: 50px;
+      max-width: 150px;
       filter: drop-shadow(0 0 12px #0ff) drop-shadow(-2px -2px 12px #00bcd4);
     }
  }
@@ -61,6 +56,12 @@ button {
     cursor: pointer;
     .trace-motion {
       animation: draw .7s linear forwards;
+    }
+    h5 {
+      display: none;
+    }
+    .spell-card__shape {
+      display: block;
     }
   }
 }
