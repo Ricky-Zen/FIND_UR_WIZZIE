@@ -6,6 +6,7 @@
 }
 
 input,
+select#activities_theme,
 input:focus,
 input:valid,
 input:active,
@@ -15,14 +16,20 @@ input:-internal-autofill-selected {
   border: none;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   margin-left: 10px;
-  margin-right:a 10px;
+  margin-right: 10px;
   text-align: center;
   border-right: 1px solid grey;
   background: #333;
   color: white;
   height: 40px;
   outline: none;
+}
 
+select#activities_theme {
+  width: 200px;
+  color: grey;
+  text-align-last: center;
+  right: 60px;
 }
 
 .input {
