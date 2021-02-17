@@ -1,10 +1,13 @@
-<h1>Activity</h1>
-<h1> <%= @activity.name %></h1>
-<h2> <%= @activity.city %> </h2>
-<h3><%= @activity.price %></h3>
-<p><%= @activity.description %></p>
+<img class="image-test" src="http://idata.over-blog.com/3/11/71/06/terrain0zv.jpg" alt="">
 
 
-  <%= link_to 'Back to list', activities_path %>
+<div class="activity-show">
+  <h1>Activity</h1>
+  <h1> <%= @activity.name %></h1>
+  <h2> <%= @activity.city %> </h2>
+  <h3><%= @activity.price %></h3>
+  <p><%= @activity.description %></p>
 
+  <%= link_to 'Back to list', activities_path, class:"btn btn-info mb-4"%>
 
+</div>
