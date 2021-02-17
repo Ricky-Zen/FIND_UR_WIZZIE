@@ -39,11 +39,3 @@ class BookingsController < ApplicationController
   end
 end
 
- create_table "bookings", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.integer "price"
-    t.date "date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_bookings_on_user_id"
-  end
