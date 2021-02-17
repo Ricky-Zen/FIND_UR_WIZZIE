@@ -2,10 +2,12 @@
 
   <div class="container">
     <h1>Found your wizzie</h1>
+    <div class="input">
       <%= form_for :activities, url: activities_path, method: :get, html: { class: "form"} do |f| %>
-        <%= f.text_field :address, placeholder: "Themes" %>
-        <%= f.text_field :category, placeholder: "Activity"%>
-        <%= f.text_field :category, placeholder: "Ciy"%>
+        <%= f.text_field :theme, placeholder: "Themes", label: "Theme" %>
+        <%= f.text_field :name, placeholder: "Activity"%>
+        <%= f.text_field :city, placeholder: "City"%>
+    </div>
         <button type="submit" class="spell-card">
           <div class="spell-card__inner">
             <div class="spell-card__shape">
