@@ -1,6 +1,26 @@
-<h1> <%= @user.first_name %></h1>
+<h1> <%= @user.first_name %> <%= @user.last_name %></h1>
 
-<h1> <% @bookings.each do |booking| %>
-  <%= booking.activity.name %>
+
+<h2>My bookings</h2>
+<ul>
+  <% @bookings.each do |booking| %>
+  <li>
+    <%= link_to booking.activity.name, activity_path(booking.activity.id) %>
+    <%= booking.date %>
+    <%= booking.status %>
+    <%= link_to 'CANCEL' %>
+  </li>
 <% end %>
-</h1>
+</ul>
+
+<h2>My activities</h2>
+<ul>
+    <% @activities.each do |activity| %>
+    <li>
+      <%= activity.name %>
+     <% end %>
+     <% @users.each do |user| %>
+      <%= user.first_name %>
+     <% end %>
+    </li>
+</ul>
