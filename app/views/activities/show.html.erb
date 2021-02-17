@@ -8,4 +8,8 @@
   <%= link_to 'Back to list', activities_path %>
 
 
-<%= link_to 'Book this activity',  new_booking_path %>
+<%= simple_form_for [@activity, @booking] do |f| %>
+<%= f.input :date, as: :date %>
+<%= f.submit %>
+<% end %>
+

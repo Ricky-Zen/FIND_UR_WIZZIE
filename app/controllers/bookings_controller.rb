@@ -10,9 +10,12 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     authorize(@booking)
+    @activity = Activity.find(params[:activity_id])
+    authorize @activity
+    @booking.activity = @activity
     @booking.user = current_user
-    if @booking.save
-      redirect_to profile(@booking_user)
+    if @booking.save!
+      redirect_to profile_path
     else
       render :new
     end
@@ -40,7 +43,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:status)
+    params.require(:booking).permit(:status, :user_id, :activity_id, :date)
   end
 
   def find_booking
