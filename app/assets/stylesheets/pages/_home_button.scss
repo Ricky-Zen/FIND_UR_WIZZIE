@@ -40,7 +40,6 @@ button {
     font-family: "Work Sans", "Helvetica", "sans-serif";
     font-size: 17px;
     color: grey;
-    word-spacing: -19px;
   }
   &__shape {
     background: #333;
@@ -56,7 +55,7 @@ button {
       max-width: 50px;
       filter: drop-shadow(0 0 12px #0ff) drop-shadow(-2px -2px 12px #00bcd4);
     }
-  }
+ }
 
   &:hover {
     cursor: pointer;
