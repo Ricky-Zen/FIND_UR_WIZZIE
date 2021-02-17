@@ -10,6 +10,12 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     authorize(@booking)
+    @booking.user = current_user
+    if @booking.save
+      redirect_to profile(@booking_user)
+    else
+      render :new
+    end
   end
 
   def accept
@@ -25,6 +31,10 @@ class BookingsController < ApplicationController
   end
 
   def cancel
+    @booking.status = 'cancelled'
+    if @booking.save
+      redirect_to profile_path
+    end
   end
 
   private
