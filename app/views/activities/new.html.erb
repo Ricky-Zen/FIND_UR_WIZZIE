@@ -10,16 +10,19 @@
 
       <%= simple_form_for [@activity] do |f| %>
 
-        <div class="element-form-new-activity">
+        <div class="element-input-1-form">
           <%= f.input :name %>
           <%= f.association :theme %>
           <%= f.input :city %>
           <%= f.input :price %>
         </div>
 
-        <%= f.input :description %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit "Create witchery activity", class: "button" %>
+        <div class="element-input-2-form">
+          <%= f.input :description %>
+          <%= f.input :photo, as: :file %>
+        </div>
+
+        <%= f.button :submit, "Create witchery activity", class: "btn btn-primary w-100 mb-2" %>
       <% end %>
 
     </div >

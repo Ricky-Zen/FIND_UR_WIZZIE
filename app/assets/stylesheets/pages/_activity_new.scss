@@ -26,16 +26,21 @@
   form {
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
 }
-
-.element-form-new-activity {
+.element-input-1-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   .form-group {
     width: 100%;
     padding: 10px;
   }
+}
+
+.element-input-2-form {
+  padding: 10px;
 }
 
 
