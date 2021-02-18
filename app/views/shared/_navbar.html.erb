@@ -1,4 +1,8 @@
-<nav class="navbar navbar-expand-sm navbar-light navbar-wizzie <%= "home-navbar" if current_page? root_path %>">
+<% if current_page?(root_path) || current_page?(new_user_session_path) %>
+  <nav class="navbar navbar-expand-sm navbar-light navbar-wizzie transp-navbar">
+<% else %>
+  <nav class="navbar navbar-expand-sm navbar-light navbar-wizzie">
+<% end %>
   <a class="navbar-brand" href="/">
     <img src="https://i.pinimg.com/564x/3e/80/86/3e80863378531040b3ae7ccc23fecef3.jpg" />
   </a>
@@ -22,4 +26,4 @@
       <% end %>
     </ul>
   </div>
-</nav>
+</nav>@
