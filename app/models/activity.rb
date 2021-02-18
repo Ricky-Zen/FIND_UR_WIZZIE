@@ -1,6 +1,7 @@
 class Activity < ApplicationRecord
   belongs_to :theme
   belongs_to :user
+  has_one :booking, dependent: :destroy
 
 
   include PgSearch::Model
@@ -24,5 +25,4 @@ class Activity < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
 end
