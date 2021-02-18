@@ -1,6 +1,8 @@
 .custom-container {
   min-height: calc(100vh - 60px);
   padding-top: 100px;
+  padding-bottom: 100px;
+  // padding bottom ajouté par ricky pour sa show profile on peut enlever si ça fucked up
 }
 
 #pages-home .custom-container,
