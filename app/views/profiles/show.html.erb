@@ -17,8 +17,12 @@
     <% @activities.each do |activity| %>
     <li>
       <%= activity.name %>
-       <%= link_to 'DESTROY', activity_path(activity), method: :delete %>
-       <%= activity.booking.user.first_name %>
+      <%= link_to 'DESTROY', activity_path(activity), method: :delete %>
+      <% if activity.booking.present? %>
+        <%= activity.booking.user.first_name %>
+        <%= link_to 'ACCEPT', accept_booking_path(activity.booking)%>
+        <%= link_to 'DECLINE', decline_booking_path(activity.booking)%>
+      <% end %>
 
      <% end %>
      <%# @users.each do |user| %>

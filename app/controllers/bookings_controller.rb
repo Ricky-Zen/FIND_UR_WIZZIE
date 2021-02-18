@@ -22,9 +22,10 @@ class BookingsController < ApplicationController
   end
 
   def accept
+    @booking = Booking.find(params[:id])
     @booking.status = 'accepted'
     if @booking.save
-      redirect_to activity_path(@booking.activity), notice: "ACCEPTED ! U DA ONE"
+      redirect_to profile_path, notice: "ACCEPTED !"
     else
       render :new
     end
