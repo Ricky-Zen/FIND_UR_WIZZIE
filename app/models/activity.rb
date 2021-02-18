@@ -3,16 +3,15 @@ class Activity < ApplicationRecord
   belongs_to :user
   has_one :booking, dependent: :destroy
 
-
   include PgSearch::Model
   pg_search_scope :search_activity,
-    against: [ :name, :description ],
+    against: [:name, :description],
     using: {
       tsearch: { prefix: true }
     }
 
   pg_search_scope :search_city,
-    against: [ :city ],
+    against: [:city],
     using: {
       tsearch: { prefix: true }
     }
@@ -20,7 +19,7 @@ class Activity < ApplicationRecord
   pg_search_scope :search_theme,
     against: [],
     associated_against: {
-      theme: [ :name ]
+      theme: [:name]
     },
     using: {
       tsearch: { prefix: true }
