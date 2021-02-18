@@ -22,15 +22,27 @@ class BookingsController < ApplicationController
   end
 
   def accept
-    @booking.status = 'accepted'
+    @booking = Booking.find(params[:id])
+    authorize(@booking)
+    # @booking.status = 'accepted'
+    @booking.update(status: "accepted")
     if @booking.save
-      redirect_to activity_path(@booking.activity), notice: "ACCEPTED ! U DA ONE"
+      redirect_to profile_path, notice: "ACCEPTED !"
     else
-      render :new
+      redirect_to profile_path, alert: "did not work"
     end
   end
 
   def decline
+    @booking = Booking.find(params[:id])
+    authorize(@booking)
+    # @booking.status = 'accepted'
+    @booking.update(status: "declined")
+    if @booking.save
+      redirect_to profile_path, notice: "declined !"
+    else
+      redirect_to profile_path, alert: "did not work"
+    end
   end
 
   def cancel

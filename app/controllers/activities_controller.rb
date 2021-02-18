@@ -45,9 +45,10 @@ class ActivitiesController < ApplicationController
     end
   end
 
+
   private
 
   def activity_params
-    params.require(:activity).permit(:name, :city, :description, :price, :category, :theme_id)
+    params.require(:activity).permit(:name, :city, :description, :price, :category, :theme_id, :photo)
   end
 end

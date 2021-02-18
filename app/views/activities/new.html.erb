@@ -1,4 +1,6 @@
+
 <div class="container-new-activity">
+
 
   <div class="form-new-activity">
 
@@ -16,11 +18,11 @@
         </div>
 
         <%= f.input :description %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit "Create witchery activity", class: "button" %>
       <% end %>
 
     </div >
-
 
     <%= link_to "Back to list", activities_path %>
 

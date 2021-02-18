@@ -1,14 +1,17 @@
 .transp-navbar {
-  position: absolute;
   background: transparent !important;
 }
 
 .navbar-wizzie {
-    height: 80px;
-    justify-content: space-between;
-    color: white;
-    width: 100%;
-    background-color: $prune;
+  height: 80px;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  background-color: $prune;
+  position: fixed;
+  top: 0;
+  transition: all .3s ease-out;
+  z-index: 999;
 }
 
 .sticky-top {

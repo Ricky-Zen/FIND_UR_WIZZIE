@@ -3,30 +3,20 @@
   width: 75%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 30px;
 }
 
 
 .activities {
-
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
 
-
-  .activity {
-    background: lightgrey;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-        position: relative;
-
-        .trash {
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-        }
+  .card-img-top {
+    object-fit: cover;
+    object-position: center;
   }
+
 
 }
