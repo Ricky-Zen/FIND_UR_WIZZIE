@@ -7,7 +7,10 @@
   <h2> <%= @activity.city %> </h2>
   <h3><%= @activity.price %></h3>
   <p><%= @activity.description %></p>
+<% if @activity.photo.attached? %>
+  <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
 
+<% end %>
 
 <%= simple_form_for [@activity, @booking] do |f| %>
 <%= f.input :date, as: :date %>

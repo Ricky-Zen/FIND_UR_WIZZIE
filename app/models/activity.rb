@@ -2,6 +2,8 @@ class Activity < ApplicationRecord
   belongs_to :theme
   belongs_to :user
   has_one :booking, dependent: :destroy
+  has_one_attached :photo
+
 
   include PgSearch::Model
   pg_search_scope :search_activity,
