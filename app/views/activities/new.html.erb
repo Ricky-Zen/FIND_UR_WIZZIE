@@ -1,15 +1,31 @@
-<%= simple_form_for [@activity] do |f| %>
-<%= f.association :theme %>
-<%= f.input :name %>
-<%= f.input :description %>
-<%= f.input :city %>
-<%= f.input :price %>
-<%= f.input :photo, as: :file %>
+
+<div class="container-new-activity">
 
 
-<%= f.submit %>
-<% end %>
+  <div class="form-new-activity">
+
+    <h3>Create a new witchery activity</h3>
+
+    <div class="input-new-activity">
+
+      <%= simple_form_for [@activity] do |f| %>
+      <%= f.association :theme %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :city %>
+      <%= f.input :price %>
+      <%= f.input :photo, as: :file %>
+
+    </div>
+
+    <%= f.submit %>
+    <% end %>
+
+    <%= link_to "Back to list", activities_path %>
+
+  </div>
 
 
 
-<%= link_to "Back to list", activities_path %>
+
+</div>
