@@ -1,21 +1,13 @@
 <div class="container-activities">
 <h1> All activities </h1>
-<p>
-  <div class="activities">
-    <% @activities.each do |activity| %>
-      <div class="activity">
-        <%= link_to activity.name, activity_path(activity) %>
-        <%= link_to 'Delete', activity_path(activity), class: "trash",  method: :delete %>
-      </div>
-    <% end  %>
+  <p>
+    <div class="activities">
+      <% @activities.each do |activity| %>
+        <div class="activity">
+          <%= link_to activity.name, activity_path(activity) %>
 
-  </div>
-
-</p>
-
-
-
-
-<%= link_to 'Add a witchery activity', new_activity_path, class:"btn btn-primary" %>
-
+        </div>
+      <% end  %>
+    </div>
+  </p>
 </div>
