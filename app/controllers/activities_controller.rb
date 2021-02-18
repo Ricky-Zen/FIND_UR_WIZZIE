@@ -29,7 +29,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
     authorize(@activity)
     if @activity.destroy
-      redirect_to activities_path
+      redirect_to profile_path
     end
   end
 

@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
 
     @activities = Activity.where(user: @user)
 
+
     @booking_users = []
 
     @bookings.each do |user|
