@@ -5,8 +5,8 @@
   <div class="form-new-activity">
 
     <h3>Create a new witchery activity</h3>
-
-    <div class="input-new-activity">
+<!--
+    <div class="input-new-activity"> -->
 
       <%= simple_form_for [@activity] do |f| %>
       <%= f.association :theme %>
@@ -16,7 +16,7 @@
       <%= f.input :price %>
       <%= f.input :photo, as: :file %>
 
-    </div>
+  <!--   </div> -->
 
     <%= f.submit %>
     <% end %>
