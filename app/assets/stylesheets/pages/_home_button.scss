@@ -27,7 +27,7 @@ button {
 .spell-card {
   border: 1px;
   margin: 10px;
-  background: #333;
+  background: $prune;
   height: 40px;
   width: 150px;
 
@@ -35,7 +35,7 @@ button {
     width: 60px;
   }
   &__shape {
-    background: #333;
+    background: $prune;
     display: none;
     place-items: center;
     position: relative;

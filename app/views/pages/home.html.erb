@@ -3,7 +3,7 @@
 
     <div class="container">
       <h1>Find your wizzie</h1>
-      <div class="input">
+      <div class="input" id="search">
         <%= form_for :activities, url: activities_path, method: :get, html: { class: "form"} do |f| %>
           <%= f.select :theme, options_for_select(@themes), include_blank: "Theme"%>
           <%= f.text_field :name, placeholder: "Activity"%>
