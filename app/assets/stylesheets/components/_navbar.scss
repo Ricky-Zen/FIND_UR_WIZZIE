@@ -36,12 +36,14 @@
   border-radius: 50px;
   padding: 10px 20px;
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 
-.btn-btn:hover {
-  background-color: red;
+.btn-add:hover {
+  background-color: white;
+  border: none;
   color: $prune;
   border-radius: 25px;
+  text-decoration: none;
 }
 
