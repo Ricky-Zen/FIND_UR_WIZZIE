@@ -1,14 +1,13 @@
-let myNav = document.querySelector(".navbar");
-window.onscroll = function () {
-    "use strict";
-    if (document.body.scrollTop >= 200 ) {
-        myNav.classList.add(".navbar-wizzie");
-        myNav.classList.remove(".transp-navbar");
-    }
-    else {
-        myNav.classList.add(".transp-navbar");
-        myNav.classList.remove(".navbar-wizzie");
-    }
-};
+const init_nav_scroll = () => {
+  const nav = document.querySelector('.navbar')
 
-export
+  window.addEventListener('scroll', (e) => {
+    if (window.scrollY > 660) {
+      nav.classList.remove('transp-navbar')
+    } else {
+      nav.classList.add('transp-navbar')
+    }
+  })
+}
+
+export { init_nav_scroll }
