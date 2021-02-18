@@ -1,6 +1,18 @@
 class ActivitiesController < ApplicationController
   def index
     @activities = policy_scope(Activity).order(created_at: :desc)
+
+    if params.dig(:activities, :name).present?
+      @activities = @activities.search_activity(params[:activities][:name])
+    end
+
+    if params.dig(:activities, :theme).present?
+      @activities = @activities.search_theme(params[:activities][:theme])
+    end
+
+    if params.dig(:activities, :city).present?
+      @activities = @activities.search_city(params[:activities][:city])
+    end
   end
 
   def show
