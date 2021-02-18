@@ -13,25 +13,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
 
-.activity:hover {
-  background-color: #AD98D2;
-}
-
-  .activity {
-    background: lightgrey;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-        position: relative;
-        border-radius: 10px;
-
-        .trash {
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-        }
+  .card-img-top {
+    object-fit: cover;
+    object-position: center;
   }
+
 
 }
