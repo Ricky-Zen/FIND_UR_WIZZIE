@@ -6,16 +6,15 @@
 }
 
 .form-new-activity {
-  background-color: black;
-  opacity: 0.5;
+  background-color: rgba(0,0,0,0.5);
   width: 60%;
-  margin: 90px;
+  margin: 40px;
   border-radius: 10px;
   padding: 40px;
   text-align: center;
   color: white;
   h3 {
-    font-family: -webkit-pictograph;
+
   }
 }
 
@@ -24,4 +23,19 @@
   justify-content: center;
   margin: 30px;
   text-align: initial;
+  form {
+    width: 100%;
+    padding: 10px;
+  }
 }
+
+.element-form-new-activity {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .form-group {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+

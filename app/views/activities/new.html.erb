@@ -7,16 +7,20 @@
     <div class="input-new-activity">
 
       <%= simple_form_for [@activity] do |f| %>
-      <%= f.association :theme %>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.input :city %>
-      <%= f.input :price %>
 
-    </div>
+        <div class="element-form-new-activity">
+          <%= f.input :name %>
+          <%= f.association :theme %>
+          <%= f.input :city %>
+          <%= f.input :price %>
+        </div>
 
-    <%= f.submit %>
-    <% end %>
+        <%= f.input :description %>
+        <%= f.submit "Create witchery activity", class: "button" %>
+      <% end %>
+
+    </div >
+
 
     <%= link_to "Back to list", activities_path %>
 
