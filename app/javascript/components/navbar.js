@@ -1,5 +1,5 @@
 const init_nav_scroll = () => {
-  const nav = document.querySelector('.navbar')
+  const nav = document.querySelector('.transp-navbar')
 
   window.addEventListener('scroll', (e) => {
     if (window.scrollY > 500) {
