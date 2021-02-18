@@ -1,3 +1,9 @@
 .custom-container {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 60px);
+  padding-top: 100px;
+}
+
+#pages-home .custom-container,
+#sessions-new .custom-container {
+  padding: 0;
 }
