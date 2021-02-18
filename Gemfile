@@ -4,6 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 
 # Gemfile
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Cloudinary
+gem 'cloudinary', '~> 1.16.0'
+# Gemfile
 gem 'pg_search', '~> 2.3.0'
 
 gem 'pundit'

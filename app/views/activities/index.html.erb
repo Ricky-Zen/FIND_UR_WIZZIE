@@ -1,13 +1,23 @@
 <div class="container-activities">
-<h1> All activities </h1>
-  <p>
+<h1> All activities 🧙‍♀️ </h1>
     <div class="activities">
-      <% @activities.each do |activity| %>
+<!--       <%# @activities.each do |activity| %>
         <div class="activity">
-          <%= link_to activity.name, activity_path(activity) %>
+          <%#= link_to activity.name, activity_path(activity) %>
 
         </div>
-      <% end  %>
+      <%# end  %> -->
+      <% @activities.each do |activity| %>
+        <div class="card" style="width: 18rem;">
+          <% if activity.photo.attached? %>
+            <%= cl_image_tag activity.photo.key, class: "card-img-top" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      <% end %>
     </div>
-  </p>
 </div>

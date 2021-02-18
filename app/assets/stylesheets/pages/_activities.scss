@@ -3,24 +3,29 @@
   width: 75%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 30px;
 }
 
 
 .activities {
-
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
 
+.activity:hover {
+  background-color: #AD98D2;
+}
 
   .activity {
     background: lightgrey;
-    height: 150px;
+    height: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
         position: relative;
+        border-radius: 10px;
 
         .trash {
           position: absolute;
