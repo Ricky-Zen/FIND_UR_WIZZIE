@@ -73,7 +73,30 @@
     margin: auto;
     color: $prune;
     a {
-      text-decoration: underline;
+      text-decoration: none;
+      position:relative;
+      padding: 0 5px;
+
+      &:hover {
+        text-decoration: none;
+
+        &:after {
+          height: 117%;
+        }
+
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background: #a8a3ce;
+        z-index: -1;
+        transition: all 0.3s ease;
+      }
     }
   }
 }
