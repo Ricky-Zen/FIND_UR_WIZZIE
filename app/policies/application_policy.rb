@@ -6,6 +6,14 @@ class ApplicationPolicy
     @record = record
   end
 
+  def accept?
+    record.activity.user == user
+  end
+
+  def decline?
+    record.activity.user == user
+  end
+
   def index?
     false
   end

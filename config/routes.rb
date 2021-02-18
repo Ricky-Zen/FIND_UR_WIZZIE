@@ -12,9 +12,11 @@ Rails.application.routes.draw do
   end
 
   resources :bookings do
-    member { patch :accept }
-    member { patch :decline }
-    member { patch :cancel }
+    member  do
+      patch :accept
+      patch :decline
+      patch :cancel
+    end
   end
 
   resource :profile, only: [:show]
