@@ -11,7 +11,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+
+  <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
 
   <%= render 'shared/navbar' %>
     <div class="custom-container">
