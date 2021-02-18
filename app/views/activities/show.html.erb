@@ -1,38 +1,32 @@
+<div class="top-page">
+  <h2 class="title">You want to experience:</h2>
+</div>
 
-<h2 class="title mb-3">You want to experience:</h2>
-
-    <div class="container-activity-show">
-
-
-    <!--   <div class="card-img"> -->
-    <!--   </div> -->
+  <div class="container-activity-show">
 
     <div class="activity-container">
 
-    <img class="image-test" src="http://idata.over-blog.com/3/11/71/06/terrain0zv.jpg" alt="">
+      <img class="image-test" src="http://idata.over-blog.com/3/11/71/06/terrain0zv.jpg" alt="">
 
-    <div class="activity">
+      <div class="activity">
 
-      <div class="activity-info">
-        <h1> <%= @activity.name %></h1>
-        <h3> <%= @activity.city %> </h3>
-        <h3><%= @activity.price %></h3>
-        <p><%= @activity.description %></p>
-        <% if @activity.photo.attached? %>
-          <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="activity-info">
+          <h1> <%= @activity.name %></h1>
+          <h4 id="city-name"> <%= @activity.city %> </h4>
+          <h3><%= @activity.price %></h3>
+          <p><%= @activity.description %></p>
+          <% if @activity.photo.attached? %>
+            <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
+        </div>
+
+      <div class="booking-form">
+        <%= simple_form_for [@activity, @booking] do |f| %>
+        <%= f.input :date, as: :date %>
+        <%= f.button :submit, "Book now", class: "btn btn-primary" %>
         <% end %>
       </div>
-
-    <div class="booking-form">
-      <%= simple_form_for [@activity, @booking] do |f| %>
-      <%= f.input :date, as: :date %>
-      <%= f.submit %>
-      <% end %>
     </div>
-
   </div>
 </div>
-
-    <%= link_to 'Back to list', activities_path, class:"btn btn-info mb-4"%>
-
-</div>
+  <%= link_to 'Back to list', activities_path, class:"btn-back"%>
