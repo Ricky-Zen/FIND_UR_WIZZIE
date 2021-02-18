@@ -1,32 +1,72 @@
-<h1> <%= @user.first_name %> <%= @user.last_name %></h1>
+
+<div id="hello"><h1> Hi <%= @user.first_name %> <%= @user.last_name %> ! </h1></div>
+
+<section>
+<!-- <h2>My bookings</h2> -->
+  <div id="light"></div>
+  <div id="dumbledore">
+    <p class="quote" id="part1">Discover </p>
+    <p class="quote" id="part2">your</p>
+    <p class="quote" id="part3">bookings</p>
+  </div>
+</section>
 
 
-<h2>My bookings</h2>
 <ul>
   <% @bookings.each do |booking| %>
   <li>
     <%= link_to booking.activity.name, activity_path(booking.activity.id) %>
     <%= booking.date %>
+    <%= booking.activity.price %> $
     <%= booking.status %>
   </li>
 <% end %>
 </ul>
 
-<h2>My activities</h2>
-<ul>
-    <% @activities.each do |activity| %>
-    <li>
-      <%= activity.name %>
-      <%= link_to 'DESTROY', activity_path(activity), method: :delete %>
-      <% if activity.booking.present? %>
-        <%= activity.booking.user.first_name %>
-        <%= link_to 'ACCEPT', accept_booking_path(activity.booking), method: :patch%>
-        <%= link_to 'DECLINE', decline_booking_path(activity.booking), method: :patch%>
-      <% end %>
 
-     <% end %>
-     <%# @users.each do |user| %>
-      <%#= user.first_name %>
-     <%# end %>
-    </li>
+<!-- <h2>My activities</h2> -->
+<section>
+  <div id="light"></div>
+  <div id="dumbledore">
+    <p class="quote" id="part1"> Magic </p>
+    <p class="quote" id="part2"> activities</p>
+    <p class="quote" id="part3">by you</p>
+  </div>
+</section>
+
+
+
+    <div class="center">
+  <ul style="list-style-type:none">
+    <li>
+    <% @activities.each do |activity| %>
+      <div class="property-card">
+        <!-- <a href="#"> -->
+          <div class="property-image">
+            <div class="property-image-title">
+               <h6> <% if activity.booking.present? %>
+                  Booked by <%= activity.booking.user.first_name %></h6>
+                  <%= link_to 'ACCEPT', accept_booking_path(activity.booking), method: :patch%>
+                 <%= link_to 'DECLINE', decline_booking_path(activity.booking), method: :patch%>
+      <% end %>
+            </div>
+          </div><!-- </a> -->
+        <div class="property-description">
+          <h5> <%= activity.name %> </h5>
+          <p> <%= activity.description %> <br><strong><%= activity.price %>$</strong></br></p>
+        </div>
+
+          <div class="property-social-icons">
+            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+            <%= link_to 'DESTROY', activity_path(activity), method: :delete %>
+          </div>
+        </a>
+      </div>
+    </div>
+    <% end %>
+  </li>
 </ul>
+
+
+
+
