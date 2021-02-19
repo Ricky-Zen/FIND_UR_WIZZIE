@@ -10,7 +10,7 @@
 
           <h1> <%= @activity.name %></h1>
           <h4 id="city-name"> <%= @activity.city %> </h4>
-          <h3><%= @activity.price %></h3>
+          <h3> <%= @activity.price %> </h3>
           <p><%= @activity.description %></p>
           <% if @activity.photo.attached? %>
             <%= cl_image_tag @activity.photo.key, height: 300, width: 500, crop: :fill %>
