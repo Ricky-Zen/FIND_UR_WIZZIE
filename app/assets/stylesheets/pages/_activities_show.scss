@@ -1,16 +1,22 @@
 .top-page {
   display: flex;
+  justify-content: center;
   .title {
     padding-left: 37px;
-    // text-align: center;
     font-weight: lighter;
     margin-top: 30px;
+    margin-bottom: 20px;
   }
-  .btn-back {
-    background-color: $soleil;
-    // height: 40px;
-    padding: 10px 20px;
-  }
+}
+
+.btn-back {
+    background-color: #F6B23C;
+    padding: 8px 12px;
+    position: relative;
+    top: -540px;
+    left: 1210px;
+    border-radius: 3px;
+    font-size: 14px;
 }
 
 .container-activity-show {
