@@ -2,7 +2,7 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.yesiwantit.com/blog/wp-content/uploads/2019/09/harry-potter-and-friends-in-one-of-the-earlier-movies-1250x600.jpeg);">
 
     <div class="container">
-      <h1>Find your wizzie</h1>
+        <h1>Find your wizzie</h1>
       <div class="input" id="search">
         <%= form_for :activities, url: activities_path, method: :get, html: { class: "form"} do |f| %>
           <%= f.select :theme, options_for_select(@themes), include_blank: "Theme"%>
