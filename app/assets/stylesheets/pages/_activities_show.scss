@@ -1,69 +1,66 @@
-.top-page {
+.show-container {
   display: flex;
-  justify-content: center;
-  .title {
-    padding-left: 37px;
-    font-weight: lighter;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    // position: relative;
-    // left: -475px;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    color: black;
   }
 }
 
 .cards-container {
+  width: 80%;
+  text-align: center;
+  color: white;
+  padding: 20px;
   display: flex;
-  justify-content: space-around;
-  margin: 0 30px;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .card-activity {
-    display: flex;
-    width: 800px;
-    // margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 3px;
-      img {
-        width: 500px;
-        border-radius: 3px;
-        height: 450px;
-        width: 485px;
-        object-fit: cover;
-      }
-    .activity-info {
-        padding-left: 20px;
-        // display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        p {
-          color: grey;
-        }
+.cards-activity {
+  display:flex;
+  color: black;
+}
 
-    }
+.activity-info {
+  margin: 30px;
+  display: flex;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.activity-info-img {
+  border-radius: 3px;
+  width: 90%;
+}
+
+.activity-info-text {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 17px;
   }
-  .card-booking {
-    width: 300px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 3px;
-    .flex-row {
-      flex-direction: column !important;
-    }
-    .column-date{
-      margin: 5px 0px;
-    }
+  h4 {
+    font-size: 17px;
+  }
+  h3 {
+    font-size: 17px;
   }
 }
 
-.btn-back {
-    background-color: #F6B23C;
-    padding: 8px 12px;
-    // position: relative;
-    // top: -540px;
-    // left: 1210px;
-    border-radius: 3px;
-    font-size: 14px;
+.card-booking {
+  width: 25%;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: white;
 }
 
+.flex-row {
+  flex-direction: column !important;
+}
 
+.form-group {
 
+}

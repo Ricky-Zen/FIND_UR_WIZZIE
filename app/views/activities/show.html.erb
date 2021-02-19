@@ -1,48 +1,41 @@
 <div class="show-container">
 
-  <div class="top-page">
-    <h2 class="title">You want to experience:</h2>
-    <%= link_to 'Back to list', activities_path, class:"btn-back ml-2"%>
-  </div>
+  <h2>You want to experience...</h2>
 
-    <div class="cards-container">
+  <div class="cards-container">
+    
+    <h1> <%= @activity.name %></h1>
 
+    <div class="cards-activity">
 
-          <h1> <%= @activity.name %></h1>
-          <h4 id="city-name"> <%= @activity.city %> </h4>
-          <h3> <%= @activity.price %> </h3>
-          <p><%= @activity.description %></p>
-          <% if @activity.photo.attached? %>
-            <%= cl_image_tag @activity.photo.key, height: 300, width: 500, crop: :fill %>
-          <% end %>
+        <div class="activity-info">
+
+          <div class="activity-info-img">
+            <% if @activity.photo.attached? %>
+            <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
+          </div>
+
+          <div class="activity-info-text">
+            <p><%= @activity.description %></p>
+            <h4 id="city-name"><%= @activity.city %></h4>
+            <h3><%= @activity.price%> €</h3>
+          </div>
+
         </div>
 
-
-          <div class="activity-info">
-
-            <div class="activity-info-img">
-              <% if @activity.photo.attached? %>
-              <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
-              <% end %>
-            </div>
-
-            <div class="activity-info-text">
-              <h1><%= @a %></h1>
-              <h4 id="city-name"><%= @activity.city %></h4>
-              <h3><%= @activity.price %></h3>
-              <p><%= @activity.description %></p>
-            </div>
-
-          </div>
-
-          <div class="card-booking">
-              <%= simple_form_for [@activity, @booking] do |f| %>
-              <%= f.input :date, input_html: { class: "column-date" } %>
-              <%= f.button :submit, "Book now", class: "btn btn-primary" %>
-              <% end %>
-          </div>
-      </div>
+        <div class="card-booking">
+            <%= simple_form_for [@activity, @booking] do |f| %>
+            <%= f.input :date, input_html: { class: "column-date" } %>
+            <%= f.button :submit, "Book now", class: "btn btn-primary" %>
+            <% end %>
+        </div>
 
     </div>
+
+  </div>
+
+
+  <%= link_to 'Back to list', activities_path, class:"btn-back ml-2"%>
 
 </div>
