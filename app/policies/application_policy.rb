@@ -6,6 +6,10 @@ class ApplicationPolicy
     @record = record
   end
 
+  def new?
+    true
+  end
+
   def accept?
     record.activity.user == user
   end
@@ -27,10 +31,6 @@ class ApplicationPolicy
   end
 
   def create?
-    true
-  end
-
-  def new?
     true
   end
 
