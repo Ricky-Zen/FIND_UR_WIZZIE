@@ -14,6 +14,10 @@ class ApplicationPolicy
     record.activity.user == user
   end
 
+  def cancel?
+    true
+  end
+
   def index?
     false
   end

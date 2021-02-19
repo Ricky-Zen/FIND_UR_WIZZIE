@@ -46,9 +46,13 @@ class BookingsController < ApplicationController
   end
 
   def cancel
-    @booking.status = 'cancelled'
+    @booking = Booking.find(params[:id])
+    authorize(@booking)
+    @booking.update(status: "cancelled")
     if @booking.save
-      redirect_to profile_path
+      redirect_to profile_path, notice: "Booking cancelled !"
+    else
+      redirect_to profile_path, alert: "did not work"
     end
   end
 
