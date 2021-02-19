@@ -1,68 +1,8 @@
 <!--
 <div id="hello"><h1> Hi <%= @user.first_name %> <%= @user.last_name %> ! </h1></div>-->
-<section>
+<div class="welcome">
  <h1> Welcome <%= @user.first_name %> <%= @user.last_name %> 🧙 </h1>
-</section>
-
-
-
-<section>
-<!-- <h2>My bookings</h2> -->
-  <div id="light"></div>
-  <div id="dumbledore">
-    <p class="quote" id="part1">Discover </p>
-    <p class="quote" id="part2">your</p>
-    <p class="quote" id="part3">bookings 🛎️</p>
-  </div>
-</section>
-
-
-
-  <% @bookings.each do |booking| %>
-  <li>
-    <%= link_to booking.activity.name, activity_path(booking.activity.id) %>
-    <%= booking.date %>
-    <%= booking.activity.price %> $
-    <%= booking.status %>
-    <%= link_to 'CANCEL', cancel_booking_path(booking), method: :patch %>
-  </li>
-<% end %>
-</ul>
-
-<section>
-  <div class="center">
-    <% @bookings.each do |booking| %>
-      <div class="property-card">
-        <!-- <a href="#"> -->
-          <div class="property-image">
-            <div class="property-image-title">
-               <h6>Proposed by <%= booking.activity.user.first_name %></h6>
-            </div>
-          </div><!-- </a> -->
-
-        <div class="property-description">
-          <h5>  <%= link_to booking.activity.name, activity_path(booking.activity.id) %> </h5>
-          <p> <%= booking.activity.description %> <br><strong><%= booking.activity.price %>$</strong></br></p>
-        </div>
-
-          <div class="property-social-icons">
-            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-            <%= link_to 'CANCEL', cancel_booking_path(booking), method: :patch %>
-          </div>
-      </div>
-    <% end %>
-</section>
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 <!-- <h2>My activities</h2> -->
 <section>
@@ -75,7 +15,7 @@
 </section>
 
 
-
+<section>
   <div class="center">
 <!--   <ul style="list-style-type:none">
     <li> -->
@@ -106,7 +46,8 @@
           <h5> <%= activity.name %> </h5>
           <p> <%= activity.description %>
             <br><strong><%= activity.price %>$</strong></br>
-            <br> <i> 🧭 Happening in <%= activity.city %> </i>/<br>
+            <br>
+            🧭 Happening in <%= activity.city %>
             <br>
              <% if activity.booking.present? %>
               <% if activity.booking.status == 'pending' %>
@@ -129,4 +70,68 @@
           </div>
       </div>
 <% end %>
+</section>
+
+
+
+
+
+
+<section>
+<!-- <h2>My bookings</h2> -->
+  <div id="light"></div>
+  <div id="dumbledore">
+    <p class="quote" id="part1">Discover </p>
+    <p class="quote" id="part2">your</p>
+    <p class="quote" id="part3">bookings 🛎️</p>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="center">
+    <% @bookings.each do |booking| %>
+      <div class="property-card">
+        <!-- <a href="#"> -->
+          <%= link_to activity_path(booking.activity.id) do %>
+          <div class="property-image">
+            <div class="property-image-title">
+               <h6>Proposed by <%= booking.activity.user.first_name %></h6>
+            </div>
+          </div><!-- </a> -->
+          <% end %>
+
+        <div class="property-description">
+          <h5>  <%= link_to booking.activity.name, activity_path(booking.activity.id) %> </h5>
+          <p> <%= booking.activity.description %>
+            <br><strong><%= booking.activity.price %>$</strong></br>
+            <br>
+             🧭 Happening in <%= booking.activity.city %>
+            <br> You booked on <%= booking.date %></br>
+          </p>
+
+        </div>
+
+          <div class="property-social-icons">
+            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+            <%= link_to 'CANCEL', cancel_booking_path(booking), method: :patch %>
+          </div>
+      </div>
+    <% end %>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 

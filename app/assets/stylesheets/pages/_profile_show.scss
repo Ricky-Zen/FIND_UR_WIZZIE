@@ -34,12 +34,20 @@ p
 {
   font-size:12px;
 }
+.welcome {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding: 20px;
+}
 
 .center
 {
-  height: 50vh;
+  // height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width:100%;
-  display: flex;
+  // display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -55,6 +63,7 @@ p
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+  justify-self: center;
   -webkit-box-orient:vertical;
   -webkit-box-direction:normal;
   -ms-flex-direction:column;
@@ -136,7 +145,7 @@ p
 }
 .property-card:hover .property-image
 {
-  height:18em;
+  height:19em;
 }
 
 .property-card:hover .property-social-icons
@@ -225,7 +234,7 @@ opacity:1;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 25px;
   display: flex;
   justify-content: center;
   // flex-direction: column;
@@ -241,7 +250,7 @@ opacity:1;
   font-size: 30px;
   margin: 5px;
   opacity: 0;
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
   animation-fill-mode: forwards;
 }
 
