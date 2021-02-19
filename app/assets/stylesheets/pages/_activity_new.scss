@@ -1,3 +1,7 @@
+.custom-container {
+  padding-bottom: 0px;
+}
+
 .container-new-activity {
   background-image: url("https://www.gamosaurus.com/wp-content/uploads/AAA/Warner-Bros/Harry-Potter/vignette-harry-potter-rpg-jeu-de-role-hogwarts-a-dark-legacy-rumeurs-theories-leak.jpg");
   background-size: cover;
@@ -7,25 +11,31 @@
 
 .form-new-activity {
   background-color: rgba(0,0,0,0.5);
-  width: 60%;
+  width: 50%;
   margin: 40px;
   border-radius: 10px;
-  padding: 40px;
   text-align: center;
   color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h3 {
-
+    padding-top: 20px;
+  }
+  a {
+    margin-top: 25px;
   }
 }
 
 .input-new-activity {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 30px 0px 10px 0px;
   text-align: initial;
+  width: 90%;
   form {
     width: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
   }
