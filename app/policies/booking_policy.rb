@@ -19,5 +19,9 @@ class BookingPolicy < ApplicationPolicy
     def decline?
       true
     end
+
+    def cancel?
+      true
+    end
   end
 end
