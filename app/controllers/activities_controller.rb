@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
     else
       render :new
     end
-   end
+  end
 
   def destroy
     @activity = Activity.find(params[:id])
