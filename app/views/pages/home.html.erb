@@ -75,19 +75,19 @@
 
 <div class="theme-cards">
   <div class="theme-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.telegraph.co.uk/content/dam/films/2016/11/15/halfblood_trans_NvBQzQNjv4BqGJpW-0BB12mTXpq6uZH8cyWhXOmRAq6WUjsSs40wdYk.jpg?imwidth=480)">
-        Sport
+        <%= link_to "Sport", activities_path(params: {activities: {theme: "sport"}} )%>
   </div>
 
   <div class="theme-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.gazette-du-sorcier.com/wp-content/uploads/2020/02/illu-test-survie.png)">
-        Event
+        <%= link_to "Event", activities_path(params: {activities: {theme: "event"}} )%>
   </div>
 
   <div class="theme-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.huffingtonpost.com/asset/5bb4da912100002501c8249b.jpeg?ops=scalefit_630_noupscale)">
-        Leisure
+        <%= link_to "Leisure", activities_path(params: {activities: {theme: "leisure"}} )%>
   </div>
 
   <div class="theme-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://awol.junkee.com/wp-content/uploads/2017/02/Forest.jpg)">
-        Outdoors
+        <%= link_to "Outdoors", activities_path(params: {activities: {theme: "outdoors"}} )%>
   </div>
 
 </div>
