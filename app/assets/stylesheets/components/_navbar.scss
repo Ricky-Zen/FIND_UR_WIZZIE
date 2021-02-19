@@ -12,6 +12,16 @@
   top: 0;
   transition: all .3s ease-out;
   z-index: 999;
+  .right-part-navbar {
+    width: 50%;
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+  }
+
+  .left-part-navbar {
+    width: 50%;
+  }
 }
 
 .sticky-top {
@@ -34,17 +44,19 @@
 
 .btn-add {
   background-color: transparent;
+  text-decoration: none;
   border:  1px solid;
   border-color: white;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 7px 14px;
+  margin-right: 10px;
   color: white;
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
 }
 
 .btn-add:hover {
   background-color: white;
-  border: none;
+  border: 1px solid white;
   color: $prune;
   border-radius: 25px;
   text-decoration: none;
