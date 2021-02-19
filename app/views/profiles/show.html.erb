@@ -82,7 +82,7 @@
     <% @activities.each do |activity| %>
       <div class="property-card">
         <!-- <a href="#"> -->
-          <div class="property-image">
+          <div class="property-image" style="background-image: url('<%= cl_image_path activity.photo.key %>');">
             <div class="property-image-title">
               <% if activity.booking.present? %>
                 <% if activity.booking.status == 'pending' %>
@@ -108,14 +108,16 @@
             <br><strong><%= activity.price %>$</strong></br>
             <br> <i> 🧭 Happening in <%= activity.city %> </i>/<br>
             <br>
+             <% if activity.booking.present? %>
               <% if activity.booking.status == 'pending' %>
                   🕰️ Still waiting for a booking
               <% elsif activity.booking.status == 'accepted' %>
                   🕰️ Wanted on <%= activity.booking.date %>
-                  <%= link_to 'DECLINE', decline_booking_path(activity.booking), method: :patch%>
               <% elsif activity.booking.status == 'declined' %>
-                 Booked by <%= activity.booking.user.first_name %>
+                 🕰️ You refused to do it on <%= activity.booking.date %>
               <% elsif activity.booking.status == 'cancelled' %>
+                👻 Oops, your buddy cancelled
+              <% end %>
               <% end %>
             <br>
           </p>
@@ -126,7 +128,5 @@
             <%= link_to 'DELETE', activity_path(activity), method: :delete %>
           </div>
       </div>
-    <% end %>
-<!--   </li>
-</ul> -->
+<% end %>
 

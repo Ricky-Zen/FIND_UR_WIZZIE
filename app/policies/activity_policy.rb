@@ -3,5 +3,9 @@ class ActivityPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+
+    def new?
+      true
+    end
   end
 end
