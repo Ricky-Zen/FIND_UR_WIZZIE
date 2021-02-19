@@ -24,5 +24,17 @@
 
 .btn-index {
     width: 50%;
-    margin: 10px auto;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+.btn-index:hover {
+  background-color: #210117;
+  border-color: #210117;
+}
+
+.h5 {
+  font-style: 2px;
+  font-weight: bold;
+  font-family: arial;
 }

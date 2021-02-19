@@ -15,11 +15,12 @@ s
             <%= image_tag "https://static.papergeek.fr/2017/03/harry-potter-poudlard-sorciers-angleterre.jpg", class: "card-img-top"  %>
           <% end %>
           <div class="card-body">
+            <p class="card-title"> <%= activity.price %> </p>
             <h5 class= "card-title">  <%= activity.name %></h5>
             <p class= "card-text">  <%= activity.description %></p>
           </div>
             <%= link_to "voir plus", activity_path(activity), class: "btn btn-primary btn-index" %>
-            // mettre ville & prix(mymy) //
+
         </div>
       <% end %>
     </div>
