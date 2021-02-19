@@ -2,15 +2,12 @@
   <h2 class="title">You want to experience:</h2>
 </div>
 
-  <div class="container-activity-show">
+  <div class="cards-container">
 
-    <div class="activity-container">
+    <div class="card-activity">
+        <img class="image-test" src="http://idata.over-blog.com/3/11/71/06/terrain0zv.jpg" alt="">
 
-      <img class="image-test" src="http://idata.over-blog.com/3/11/71/06/terrain0zv.jpg" alt="">
-
-      <div class="activity">
-
-        <div class="activity-info">
+         <div class="activity-info">
           <h1> <%= @activity.name %></h1>
           <h4 id="city-name"> <%= @activity.city %> </h4>
           <h3><%= @activity.price %></h3>
@@ -20,13 +17,13 @@
           <% end %>
         </div>
 
-      <div class="booking-form">
+    </div>
+
+    <div class="card-booking">
         <%= simple_form_for [@activity, @booking] do |f| %>
-        <%= f.input :date, as: :date %>
+        <%= f.input :date, input_html: { class: "column-date" } %>
         <%= f.button :submit, "Book now", class: "btn btn-primary" %>
         <% end %>
-      </div>
     </div>
-  </div>
 </div>
-  <%= link_to 'Back to list', activities_path, class:"btn-back"%>
+  <%= link_to 'Back to list', activities_path, class:"btn-back ml-2"%>
