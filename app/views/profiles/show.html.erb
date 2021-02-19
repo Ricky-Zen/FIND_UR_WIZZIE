@@ -22,7 +22,11 @@
     <% @activities.each do |activity| %>
       <div class="property-card">
         <!-- <a href="#"> -->
-          <div class="property-image" style="background-image: url('<%= cl_image_path activity.photo.key %>');">
+          <% if activity.photo.attached? %>
+            <div class="property-image" style="background-image: url('<%= cl_image_path activity.photo.key %>');">
+          <% else %>
+            <div class="property-image" style="background-image: url('https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/loisirs/cinema/dossiers/acteur-harry-potter/luna-lovegood/57108013-1-fre-FR/Luna-Lovegood.jpg');">
+          <% end %>
             <div class="property-image-title">
               <% if activity.booking.present? %>
                 <% if activity.booking.status == 'pending' %>
