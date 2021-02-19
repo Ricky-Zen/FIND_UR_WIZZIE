@@ -13,7 +13,7 @@
           <h3><%= @activity.price %></h3>
           <p><%= @activity.description %></p>
           <% if @activity.photo.attached? %>
-            <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag @activity.photo.key, height: 300, width: 500, crop: :fill %>
           <% end %>
         </div>
 
