@@ -18,7 +18,7 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     authorize(@activity)
-    @booking = Booking.
+    @booking = Booking.new
   end
 
   def new
@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
     else
       render :new
     end
-   end
+  end
 
   def destroy
     @activity = Activity.find(params[:id])
@@ -44,7 +44,6 @@ class ActivitiesController < ApplicationController
       redirect_to profile_path
     end
   end
-
 
   private
 
